@@ -6,7 +6,9 @@ import { getContact } from './pages/contact';
 export function pageLoad() {
     // Creates the header and adds relevant content inside the header.
     const header = document.createElement('header');
-    header.textContent = "Restaurant Luigi";
+    const headerText = document.createElement('h1');
+    headerText.textContent = "Restaurant Luigi";
+    header.appendChild(headerText);
     // Creates the navigation.
     const nav = document.createElement('nav');
    
