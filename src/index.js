@@ -1,13 +1,39 @@
 import { pageLoad } from './pageLoad';
 import './style.css';
+import { getHome } from './pages/home';
+import { getMenu } from './pages/menu';
+import { getContact } from './pages/contact';
+
+// Nav element gets assigned to a constant.
+const navElement = document.querySelector('nav');
+
+// Sets the current tab to home initially.
+let currentTab = 'home';
+
+// Calls the event that is bound to the nav.
+navEvent();
+
+// Event attached to the nav, which enables the functionality for changing tabs.
+function navEvent() {
+    navElement.addEventListener('click', changeTabs);
+
+}
+
+// Checks whether current tab is the current, else it assigns to the clicked tab and renders the clicked tab.
+function changeTabs(event) {
+    if (!event.target || currentTab === event.target.id) return;
+
+    currentTab = event.target.id;
 
 
-document.addEventListener('DOMContentLoaded', () =>  {
-    pageLoad();
-    console.log("Success!");
-    
+    pageLoad(currentTab);
+}
 
-})
+
+
+
+// Loads the page.
+pageLoad(currentTab);
 
 
 

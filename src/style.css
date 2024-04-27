@@ -11,3 +11,19 @@ img {
 body {
     background-color: blanchedalmond;
 }
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    margin: 1.5rem;
+    width: 5rem;
+    border-radius: 0.5rem;
+    border: 1px solid green;
+    background-color: green;
+    color: white;
+}
