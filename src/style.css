@@ -1,6 +1,43 @@
 h1 {
-    color: green;
+    color: white;
     text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#intro {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+}
+
+#introductiontext {
+    text-align: center;
+    width: 80rem;
+    font-size: larger;
+}
+
+#menulist {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h3 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+span {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 img {
@@ -8,8 +45,12 @@ img {
     height: 30rem;
 }
 
+p {
+    font-family: Palatino, serif;
+}
+
 body {
-    background-color: blanchedalmond;
+    background-image: url('https://images.unsplash.com/photo-1498579150354-977475b7ea0b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
 }
 
 nav {
@@ -19,9 +60,17 @@ nav {
     justify-content: center;
 }
 
+li {
+    list-style-type: none;
+    text-align: center;
+
+}
+
 button {
     margin: 1.5rem;
+    text-align: center;
     width: 5rem;
+    height: 2.5rem;
     border-radius: 0.5rem;
     border: 1px solid green;
     background-color: green;
