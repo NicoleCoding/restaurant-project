@@ -8,22 +8,21 @@ export function pageLoad(currentTab) {
     // Reference to the content element.
     const contentElement = document.getElementById('content');
 
+    // Setting the content element to empty
     contentElement.textContent = '';
 
-
-    // Initially, the content element is cleared. Then it checks which tab was selected and renders the correct tab. 
+// Initially, the content element is cleared. Then it checks which tab was selected and renders the correct tab. 
 function renderContent() {
 
-    if(currentTab === 'home') {
+    if (currentTab === 'home') {
         contentElement.appendChild(getHome());
     }
-    else if(currentTab === 'menu') {
+    else if (currentTab === 'menu') {
         contentElement.appendChild(getMenu());
     }
     else {
         contentElement.appendChild(getContact());
     }
-
 }
     
 renderContent();

@@ -1,6 +1,7 @@
 // Module for the menu page.
 export function getMenu() {
-    const foodDish = [
+    // Array of food dishes
+    const foodDishes = [
         {
             name: 'Lasagna Bolognese',
             description: 'Traditional Italian lasagna with layers of pasta, rich Bolognese sauce, creamy béchamel, and Parmesan cheese',
@@ -31,43 +32,45 @@ export function getMenu() {
 
     ];
 
+    // Elements declarations
     const menuContent = document.createElement('div');
-
-    const menuHeading2 = document.createElement('h2');
-    menuHeading2.textContent = "Our menu";
+    const menuHeading = document.createElement('h2');
     const menuListContainer = document.createElement('div');
-    menuListContainer.setAttribute('id', 'menulist');
     const menuList = document.createElement('ul');
-    menuListContainer.appendChild(menuList);
 
+    // Setting content and attributes
+    menuHeading.textContent = "Our menu";
+    menuListContainer.setAttribute('id', 'menulist');
 
-    foodDish.forEach(dish => {
+    // Writing out each dish in the menu
+    foodDishes.forEach(dish => {
+        // Elements declarations
+        const foodDishName = document.createElement('h3');
+        const foodDishPrice = document.createElement('span');
+        const foodDishDesc = document.createElement('p');
+        const foodDishImage = document.createElement('img');
         const menuListItem = document.createElement('li');
 
-        const foodDishName = document.createElement('h3');
+        // Setting content and attributes for each element
         foodDishName.textContent = dish.name;
-        menuListItem.appendChild(foodDishName);
-
-        const foodDishPrice = document.createElement('span');
         foodDishPrice.textContent = dish.price;
-        menuListItem.appendChild(foodDishPrice);
-
-        const foodDishDesc = document.createElement('p');
         foodDishDesc.textContent = dish.description;
-        menuListItem.appendChild(foodDishDesc);
-
-        const foodDishImage = document.createElement('img');
         foodDishImage.src = dish.image;
+        foodDishImage.alt = dish.name;
+        
+        // Appending each element to the menu list item
+        menuListItem.appendChild(foodDishName);
+        menuListItem.appendChild(foodDishPrice);
+        menuListItem.appendChild(foodDishDesc);
         menuListItem.appendChild(foodDishImage);
 
+        // Appending the menu list items to the menu list
         menuList.appendChild(menuListItem);
-
     });
 
-    
-    
-
-    menuContent.appendChild(menuHeading2);
+    // Appending the menu elements to the menu content
+    menuListContainer.appendChild(menuList);
+    menuContent.appendChild(menuHeading);
     menuContent.appendChild(menuListContainer);
 
     return menuContent;
