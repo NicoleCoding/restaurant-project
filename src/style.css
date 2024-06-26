@@ -1,10 +1,19 @@
+/* Fonts */
 @font-face {
     font-family: 'Italianno';
     src: url('./assets/Italianno-Regular.ttf');
     font-weight: 600;
     font-style: normal;
 }
-
+/* Body styles */
+body {
+    background-color:  #FDEBD0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+/* Headings */
 h1 {
     color: white;
     text-align: center;
@@ -14,27 +23,76 @@ h1 {
     flex: 1;
 }
 
+h2 {
+    text-align: center;
+    color: black;
+    font-family: Italianno;
+    font-size: 45px;
+}
+
+h3 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/* Paragraph styling */
+p {
+    font-family: Palatino, serif;
+}
+/* Image styling */
+img {
+    width: 45rem;
+    height: 30rem;
+    border-radius: 10px;
+}
+/* Div styling */
 div {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
+/* Header styling */
 header {
     background-color: #C0392B;
     display: flex;
     flex-direction: row;
-    gap: 65%;
+    align-items: center;
     height: 8rem;
+    gap: 65%;
+}
+/* Navigation styling */
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 2;
 }
 
+li {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav a {
+    margin: 0.05rem;
+    padding: 3rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    color: white;
+}
+
+a:hover {
+    color: #F4D03F;
+}
+/* Content container styling */
 #content {
     flex: 1;
+    width: 100%;
 }
-
+/* Hero section styling */
 #hero {
     height: 40rem;
-    width: 80rem;
+    width: 187.5%;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,14 +105,27 @@ header {
     width: 60rem;
     font-size: larger;
     padding: 2rem;
+    text-shadow: 1px 1px black;
     
 }
-
-#menulist {
+/* Menu styling */
+#menu-list {
     background-color: rgba(255, 255, 255, 0.5);
     color: black;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10rem;
 }
 
+#food-desc {
+    width: 50rem;
+    padding: 5px;
+}
+
+span {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/* Form styling */
 form {
     display: flex;
     flex-direction: column;
@@ -72,68 +143,14 @@ input {
     margin: 2rem;
     padding: 0.5rem;
 }
-
-h2 {
-    text-align: center;
-    color: black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-h3 {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-span {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-img {
-    width: 45rem;
-    height: 30rem;
-}
-
-p {
-    font-family: Palatino, serif;
-}
-
-body {
-    background-color:  #FDEBD0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; 
-}
-
-nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex: 2;
-}
-
-li {
-    list-style-type: none;
-    text-align: center;
-}
-
-nav a {
-    margin: 0.05rem;
-    padding: 2rem;
-    text-align: center;
-    border-radius: 0.5rem;
-    color: white;
-}
-
-a:hover {
-    color: #F4D03F;
-}
-
+/* Footer styling */
 footer {
     background-color: #C0392B;
     color: white;
     text-align: center;
     margin-top: auto;
     width: 100%;
+    padding: 0;
 }
 
 

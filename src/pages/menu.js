@@ -40,7 +40,7 @@ export function getMenu() {
 
     // Setting content and attributes
     menuHeading.textContent = "Our menu";
-    menuListContainer.setAttribute('id', 'menulist');
+    menuListContainer.setAttribute('id', 'menu-list');
 
     // Writing out each dish in the menu
     foodDishes.forEach(dish => {
@@ -55,6 +55,7 @@ export function getMenu() {
         foodDishName.textContent = dish.name;
         foodDishPrice.textContent = dish.price;
         foodDishDesc.textContent = dish.description;
+        foodDishDesc.setAttribute('id', 'food-desc');
         foodDishImage.src = dish.image;
         foodDishImage.alt = dish.name;
         
