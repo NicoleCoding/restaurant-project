@@ -18,6 +18,15 @@ h1 {
     color: white;
     text-align: center;
     font-family: Italianno;
+    text-shadow:
+    -1px -1px 0 #000,
+     0   -1px 0 #000,
+     1px -1px 0 #000,
+     1px  0   0 #000,
+     1px  1px 0 #000,
+     0    1px 0 #000,
+    -1px  1px 0 #000,
+    -1px  0   0 #000;
     font-size: 45px;
     margin: 15px;
     flex: 1;
@@ -25,7 +34,16 @@ h1 {
 
 h2 {
     text-align: center;
-    color: black;
+    color: white;
+    text-shadow:
+    -1px -1px 0 #000,
+     0   -1px 0 #000,
+     1px -1px 0 #000,
+     1px  0   0 #000,
+     1px  1px 0 #000,
+     0    1px 0 #000,
+    -1px  1px 0 #000,
+    -1px  0   0 #000;
     font-family: Italianno;
     font-size: 45px;
 }
@@ -36,6 +54,7 @@ h3 {
 /* Paragraph styling */
 p {
     font-family: Palatino, serif;
+    padding: 1rem;
 }
 /* Image styling */
 img {
@@ -94,18 +113,21 @@ a:hover {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
 }
 
 #hero-text {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 10px;
     text-align: center;
     width: 60rem;
     font-size: larger;
+    line-height: 1.6;
     padding: 2rem;
-    text-shadow: 1px 1px black;
+    font-weight: 500;
     
 }
 /* Menu styling */
@@ -129,19 +151,30 @@ span {
 form {
     display: flex;
     flex-direction: column;
+    align-items: center;
     background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
 }
 
 input {
     margin: 1.5rem;
+    width: 20rem;
+    padding: 1rem;
 }
 
+textarea {
+    margin: 20px;
+    padding: 1rem;
+    width: 20rem;
+}
 
-#submitbutton {
+#submit-button {
     background-color: lightgray;
     text-align: center;
     margin: 2rem;
     padding: 0.5rem;
+    border-radius: 10px;
+    width: 3rem;
 }
 /* Footer styling */
 footer {
