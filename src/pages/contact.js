@@ -1,3 +1,5 @@
+import { pageLoad } from '../pageLoad';
+
 // Module for the contact page.
 export function getContact() {
     // Elements declarations
@@ -10,6 +12,7 @@ export function getContact() {
     const contactPhone = document.createElement('input');
     const contactComment = document.createElement('textarea');
     const submitButton = document.createElement('submit');
+    const backToHomeButton = document.createElement('button');
 
     // Adding content and setting attributes for the elements
     contactHeading.textContent = "Contact us";
@@ -27,11 +30,19 @@ export function getContact() {
     contactComment.rows = '5';
     contactComment.cols = '80';
     contactComment.maxLength = '500';
-    submitButton.setAttribute('id', 'submit-button');
+    submitButton.setAttribute('class', 'button');
     submitButton.type = 'submit';
     submitButton.textContent = "Submit";
+    backToHomeButton.textContent = "Go back to home";
+    backToHomeButton.setAttribute('class', 'button');
+    backToHomeButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        pageLoad('home');
+        
+    });
 
     // Appending the elements to the contact form and then to the contact content
+    contactContent.appendChild(backToHomeButton);
     contactForm.appendChild(contactName);
     contactForm.appendChild(contactEmail);
     contactForm.appendChild(contactPhone);

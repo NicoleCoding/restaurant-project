@@ -1,3 +1,5 @@
+import { pageLoad } from '../pageLoad';
+
 // Module for the menu page.
 export function getMenu() {
     // Array of food dishes
@@ -37,10 +39,18 @@ export function getMenu() {
     const menuHeading = document.createElement('h2');
     const menuListContainer = document.createElement('div');
     const menuList = document.createElement('ul');
+    const backToHomeButton = document.createElement('button');
 
     // Setting content and attributes
     menuHeading.textContent = "Our menu";
     menuListContainer.setAttribute('id', 'menu-list');
+    backToHomeButton.textContent = "Go back to home";
+    backToHomeButton.setAttribute('class', 'button');
+    backToHomeButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        pageLoad('home');
+        
+    });
 
     // Writing out each dish in the menu
     foodDishes.forEach(dish => {
@@ -70,6 +80,7 @@ export function getMenu() {
     });
 
     // Appending the menu elements to the menu content
+    menuContent.appendChild(backToHomeButton);
     menuListContainer.appendChild(menuList);
     menuContent.appendChild(menuHeading);
     menuContent.appendChild(menuListContainer);
